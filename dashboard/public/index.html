@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sales Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Amazon Sales Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <!-- Controls -->
+        <div class="controls">
+            <label for="analysis">Select Analysis:</label>
+            <select id="analysis">
+                <option value="average-order-value-by-region">Average Order Value by Region</option>
+                <option value="revenue-by-category">Revenue by Category</option>
+                <option value="top-selling-products">Top Selling Products</option>
+                <option value="highest-sales-regions">Highest Sales Regions</option>
+                <option value="orders-fulfilled-by-amazon">Orders Fulfilled by Amazon</option>
+                <option value="orders-with-promotions">Orders with Promotions</option>
+                <option value="revenue-by-fulfillment">Revenue by Fulfillment</option>
+                <option value="sales-trends">Sales Trends</option>
+            </select>
+            <button id="load">Load</button>
+            <button id="export-pdf">Export to PDF</button>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div id="insights" class="insights">
+                <h2>Insights</h2>
+                <div id="insights-content">
+                    <!-- Insights will be dynamically inserted here -->
+                </div>
+            </div>
+            <div id="visualization" class="visualization">
+                <h2>Visualization</h2>
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Amazon Sales Dashboard</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
