@@ -1,0 +1,19 @@
+Step 1: Set Up the Database:
+
+mysql -u root -p < setup_ecommerce.sql
+==============================================
+Step 2: Enable local_infile:
+
+mysql -u root -p
+
+SET GLOBAL local_infile = 1;
+
+SHOW VARIABLES LIKE 'local_infile';
+==============================================
+Step 3: Load Data:
+
+mysql --local-infile=1 -u ecommerce_user -p ecommerce < amazonSales.sql
+
+|==============================|
+| password: ecommerce_password |
+|==============================|

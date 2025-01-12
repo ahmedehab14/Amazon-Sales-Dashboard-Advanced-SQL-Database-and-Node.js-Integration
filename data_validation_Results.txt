@@ -1,0 +1,109 @@
+--- Database Validation ---
+
+Validating table existence...
+Tables in the database:
+- Fulfillment
+- OrderProducts
+- Orders
+- Products
+- Promotions
+- Shipping
+
+
+Validating Orders table...
+Orders table contains 5390 rows.
+Sample rows from Orders table:
+('171-0006482-2020369', datetime.date(2022, 4, 29), 'Shipped - Delivered to Buyer', 1, 368.0, 'INR', 0)
+('171-0007212-7125106', datetime.date(2022, 4, 27), 'Shipped - Delivered to Buyer', 1, 1092.0, 'INR', 0)
+('171-0024891-4859557', datetime.date(2022, 4, 28), 'Shipped - Delivered to Buyer', 1, 625.0, 'INR', 0)
+('171-0035884-6656354', datetime.date(2022, 4, 28), 'Shipped - Delivered to Buyer', 1, 1238.0, 'INR', 0)
+('171-0053093-2890710', datetime.date(2022, 4, 28), 'Shipped', 1, 807.0, 'INR', 0)
+
+
+Validating Products table...
+Products table contains 2253 rows.
+Sample rows from Products table:
+('BL001-50PINK', 'BL001', 'Blouse', 'Free', 'B077Z7WHCB')
+('BL003-50BLACK', 'BL003', 'Blouse', 'Free', 'B077YWLPWJ')
+('BL009-61BLACK-B', 'BL009', 'Blouse', 'Free', 'B07861T529')
+('BL013-62BLACK', 'BL013', 'Blouse', 'Free', 'B077Z4Z4F7')
+('BL017-63BLACK', 'BL017', 'Blouse', 'Free', 'B077Z7WDXN')
+
+
+Validating Shipping table...
+Shipping table contains 5733 rows.
+Sample rows from Shipping table:
+(1, '405-8078784-5731545', 'MUMBAI', 'MAHARASHTRA', '400081.0', 'IN', 'Unknown')
+(2, '171-9198151-1101146', 'BENGALURU', 'KARNATAKA', '560085.0', 'IN', 'Shipped')
+(3, '404-0687676-7273146', 'NAVI MUMBAI', 'MAHARASHTRA', '410210.0', 'IN', 'Shipped')
+(4, '403-9615377-8133951', 'PUDUCHERRY', 'PUDUCHERRY', '605008.0', 'IN', 'Unknown')
+(5, '407-1069790-7240320', 'CHENNAI', 'TAMIL NADU', '600073.0', 'IN', 'Shipped')
+
+
+Validating Fulfillment table...
+Fulfillment table contains 5733 rows.
+Sample rows from Fulfillment table:
+(1, '405-8078784-5731545', 'Merchant', 'Standard')
+(2, '171-9198151-1101146', 'Merchant', 'Standard')
+(3, '404-0687676-7273146', 'Amazon', 'Expedited')
+(4, '403-9615377-8133951', 'Merchant', 'Standard')
+(5, '407-1069790-7240320', 'Amazon', 'Expedited')
+
+
+Validating Promotions table...
+Promotions table contains 5733 rows.
+Sample rows from Promotions table:
+(1, '405-8078784-5731545', 'No Promotion')
+(2, '171-9198151-1101146', 'Amazon PLCC Free-Financing Universal Merchant AAT-WNKTBO3K27EJC,Amazon PLCC Free-Financing Universal Merchant AAT-QX3UCCJESKPA2,Amazon PLCC Free-Financing Universal Merchant AAT-5QQ7BIYYQEDN2,Amazon PLCC Free-Financing Universal Merchant AAT-DSJ2QRXXWXVMQ,Amazon PLCC Free-Financing Universal Merchant AAT-CXJHMC2YJUK76,Amazon PLCC Free-Financing Universal Merchant AAT-CC4FAVTYR4X7C,Amazon PLCC Free-Financing Universal Merchant AAT-XXRCW6NZEPZI4,Amazon PLCC Free-Financing Universal Merchant AAT-CXNSLNBROFDW4,Amazon PLCC Free-Financing Universal Merchant AAT-R7GXNZWISTRFA,Amazon PLCC Free-Financing Universal Merchant AAT-WSJLDN3X7KEMO,Amazon PLCC Free-Financing Universal Merchant AAT-VL6FGQVGQVXUS,Amazon PLCC Free-Financing Universal Merchant AAT-EOKPWFWYW7Y6I,Amazon PLCC Free-Financing Universal Merchant AAT-ZYL5UPUNW6T62,Amazon PLCC Free-Financing Universal Merchant AAT-XVPICCHRWDCAI,Amazon PLCC Free-Financing Universal Merchant AAT-ETXQ3XXWMRXBG,Amazon PLCC Free-Financing Universal Merchant AAT-7X3XCTYG64VBE,Amazon PLCC Free-Financing Universal Merchant AAT-7CHGD3WTS3MHM,Amazon PLCC Free-Financing Universal Merchant AAT-26ZDKNME27X42,Amazon PLCC Free-Financing Universal Merchant AAT-4ZF5KN6E4LJK4,Amazon PLCC Free-Financing Universal Merchant AAT-7RCXIKUAX7DDY,Amazon PLCC Free-Financing Universal Merchant AAT-BRSZZ45H6MHAO,Amazon PLCC Free-Financing Universal Merchant AAT-MKLXOOZWQL7GO,Amazon PLCC Free-Financing Universal Merchant AAT-CB7UNXEXGIJTC,Amazon PLCC Free-Financing Universal Merchant #MP-gzasho-1593152694811,Amazon PLCC Free-Financing Universal Merchant AAT-WLBA4GZ52EAH4')
+(3, '404-0687676-7273146', 'IN Core Free Shipping 2015/04/08 23-48-5-108')
+(4, '403-9615377-8133951', 'No Promotion')
+(5, '407-1069790-7240320', 'No Promotion')
+
+
+Validating OrderProducts table...
+OrderProducts table contains 5733 rows.
+Sample rows from OrderProducts table:
+(1, '405-8078784-5731545', 'SET389-KR-NP-S')
+(2, '171-9198151-1101146', 'JNE3781-KR-XXXL')
+(3, '404-0687676-7273146', 'JNE3371-KR-XL')
+(4, '403-9615377-8133951', 'J0341-DR-L')
+(5, '407-1069790-7240320', 'JNE3671-TU-XXXL')
+
+
+Validating relationships between tables...
+Orders and Shipping relationship:
+data_validation.py:63: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+               OrderID        Date           ShipCity ShipCountry
+0  171-0006482-2020369  2022-04-29             HALDIA          IN
+1  171-0007212-7125106  2022-04-27             MUMBAI          IN
+2  171-0024891-4859557  2022-04-28  BOKARO STEEL CITY          IN
+3  171-0035884-6656354  2022-04-28            SAHARSA          IN
+4  171-0053093-2890710  2022-04-28           KASHIPUR          IN 
+
+Orders and Promotions relationship:
+data_validation.py:74: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+               OrderID        Date                                       PromotionIDs
+0  405-8078784-5731545  2022-04-30                                       No Promotion
+1  171-9198151-1101146  2022-04-30  Amazon PLCC Free-Financing Universal Merchant ...
+2  404-0687676-7273146  2022-04-30       IN Core Free Shipping 2015/04/08 23-48-5-108
+3  403-9615377-8133951  2022-04-30                                       No Promotion
+4  407-1069790-7240320  2022-04-30                                       No Promotion 
+
+Orders and Products relationship:
+data_validation.py:86: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+               OrderID              SKU       Category    Style
+0  405-8078784-5731545   SET389-KR-NP-S            Set   SET389
+1  171-9198151-1101146  JNE3781-KR-XXXL          kurta  JNE3781
+2  404-0687676-7273146    JNE3371-KR-XL          kurta  JNE3371
+3  403-9615377-8133951       J0341-DR-L  Western Dress    J0341
+4  407-1069790-7240320  JNE3671-TU-XXXL            Top  JNE3671 
+
+Validating missing or unmatched data...
+No unmatched OrderIDs in Shipping.
+
+No unmatched OrderIDs in Fulfillment.
+
+No unmatched SKUs in OrderProducts.
