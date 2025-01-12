@@ -1,0 +1,4 @@
+1.cd dashboard/
+2. npm install
+3. npm install express mysql2
+4. node server.js
